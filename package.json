@@ -1,0 +1,33 @@
+{
+  "name": "moment-revolution",
+  "version": "0.0.0",
+  "description": "moment-revolution is a moment plugin to display a date in the French Republican Calendar format.",
+  "repository": "https://github.com/nicompte/moment-revolution",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "moment",
+    "revolution",
+    "calendar"
+  ],
+  "author": {
+    "name": "Nicolas Barbotte",
+    "email": "nicolas@barbotte.net"
+  },
+  "license": "Public domain",
+  "devDependencies": {
+    "moment": "^2.8.1",
+    "chai": "^1.9.1",
+    "gulp": "^3.8.7",
+    "gulp-jshint": "^1.8.4",
+    "gulp-mocha": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglifyjs": "^0.4.2",
+    "jshint-stylish": "^0.4.0"
+  },
+  "dependencies": {
+
+  }
+}
