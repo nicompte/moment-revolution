@@ -25,10 +25,11 @@ var moment = require('moment-revolution');
 
 ## Usage
 ```js
-var moment = require('moment-revolutionnary');
+var moment = require('moment-revolution');
 
 var start = moment(new Date(1792, 8, 22));
-start.toRevolutionnary(); // Primidi 1 Vendémiaire 1
+var rev = start.toRevolutionnary();
+console.log(rev); // Primidi 1 Vendémiaire 1
 
 ```
 
