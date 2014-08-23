@@ -1,6 +1,6 @@
 'use strict';
 
-hljs.initHighlightingOnLoad();
+
 
 Date.prototype.toDateInputValue = function() {
   var local = new Date(this);
@@ -10,6 +10,7 @@ Date.prototype.toDateInputValue = function() {
 
 $(function (){
 
+  hljs.initHighlightingOnLoad();
 
   $('#date').datetimepicker({
     format: 'dd/mm/yyyy',
