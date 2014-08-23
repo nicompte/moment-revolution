@@ -726,7 +726,8 @@ if (typeof require !== 'undefined') {
 
   function _formatRevolutionnary (revolutionnaryDate) {
     var day = ((revolutionnaryDate[1] <= 12) ? revolutionnaryDate[3] : (revolutionnaryDate[3] + 10)) - 1;
-    return days[day] + ' ' + revolutionnaryDate[3] + ' ' + months[revolutionnaryDate[1] - 1] + ' ' + revolutionnaryDate[0];
+    var date = revolutionnaryDate[3] + (revolutionnaryDate[2] - 1) * 10;
+    return days[day] + ' ' + date + ' ' + months[revolutionnaryDate[1] - 1] + ' ' + revolutionnaryDate[0];
   }
 
   moment.fn.toRevolutionnary = function () {
@@ -743,7 +744,7 @@ if (typeof require !== 'undefined') {
   if(typeof module !== 'undefined'){
     module.exports = moment;
   }else{
-    this.moment = moment;
+    window.moment = moment;
   }
 
 })(moment);

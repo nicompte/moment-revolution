@@ -8,7 +8,7 @@ moment(new Date(1988, 2, 29).toRevolutionnary(); //Nonidi 9 Germinal 196
 
 ## Installation
 
-moment-revolution is designed to work both using [node](http://nodejs.org) or in the browser.
+`moment-revolution` is designed to work both using [node](http://nodejs.org) or in the browser.
 
 ### In the browser
 
