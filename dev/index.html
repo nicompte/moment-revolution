@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>moment-revolution</title>
+        <meta name="description" content="moment-revolution">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+        <!-- build:css styles/main.min.css -->
+        <link rel="stylesheet" href="/assets/lib/highlightjs/styles/railscasts.css">
+        <link rel="stylesheet" href="/assets/styles/main.css">
+        <!-- endbuild -->
+
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.1/json3.min.js"></script>
+        <![endif]-->
+
+        <!-- build:js scripts/modernizr.min.js -->
+        <script src="/assets/lib/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body class="starter">
+
+      <a href="https://github.com/nicompte/moment-revolution" class="ribbon" target="_blank">Fork me on GitHub</a>
+
+        <!--
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">my awesome app</a>
+            </div>
+          </div>
+        </div>
+        -->
+        <div class="container">
+          <div class="header">
+            <h1>moment-revolution</h1>
+          </div>
+          <div class="demo clearfix">
+            <div class="col-md-offset-4 col-md-3">
+              <form>
+                <div class="form-group">
+                  <input class="form-control" type="date" name="date" id="date">
+                </div>
+              </form>
+            </div>
+            <div id="revdate" class="col-md-3 revdate">
+              <span></span>
+            </div>
+          </div>
+          <div class="col-md-12 code clearfix">
+            <pre>
+              <code class="javascript col-md-offset-4 clearfix">
+                $('#date').on('change', function(){
+                  var b = $(this).val().split(/\D/);
+                  var date = new Date(b[0], --b[1], b[2]);
+                  var revDate = moment(date).toRevolutionnary();
+                  $('#revdate').html(revDate);
+                });
+              </code>
+            </pre>
+          </div>
+          <div class="readme col-md-8 col-md-offset-2">
+<h1 id="moment-revolution">moment-revolution</h1>
+<p><code>moment-revolution</code> is a <a href="http://momentjs.com">moment</a> plugin to display a date in the <a href="http://en.wikipedia.org/wiki/French_Republican_Calendar">French Republican Calendar</a> format.</p>
+<pre><code class="lang-js">moment(<span class="hljs-literal">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1988</span>, <span class="hljs-number">2</span>, <span class="hljs-number">29</span>)<span class="hljs-built_in">.</span>toRevolutionnary(); <span class="hljs-comment">//Nonidi 9 Germinal 196</span></code></pre>
+<h2 id="installation">Installation</h2>
+<p><code>moment-revolution</code> is designed to work both using <a href="http://nodejs.org">node</a> or in the browser.</p>
+<h3 id="in-the-browser">In the browser</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"moment.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"moment-revolution.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+...
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+<h3 id="with-node">With node</h3>
+<p><code>moment-revolution</code>requires moment, but does not include it in its own dependencies, so you have to add it to your <code>package.json</code>file. However, you do not have to require it.</p>
+<pre><code class="lang-js">var moment = <span class="hljs-keyword">require</span>(<span class="hljs-string">'moment-revolution'</span>);
+<span class="hljs-keyword">...</span></code></pre>
+<h2 id="usage">Usage</h2>
+<pre><code class="lang-js"><span class="hljs-built_in">var</span> moment <span class="hljs-subst">=</span> <span class="hljs-keyword">require</span>(<span class="hljs-string">'moment-revolution'</span>);
+
+<span class="hljs-built_in">var</span> start <span class="hljs-subst">=</span> moment(<span class="hljs-literal">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1792</span>, <span class="hljs-number">8</span>, <span class="hljs-number">22</span>));
+<span class="hljs-built_in">var</span> rev <span class="hljs-subst">=</span> start<span class="hljs-built_in">.</span>toRevolutionnary();
+console<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(rev); <span class="hljs-comment">// Primidi 1 Vendémiaire 1</span></code></pre>
+<h2 id="credit">Credit</h2>
+<p>Fourmilab Calendar Converter - <a href="http://fourmilab.ch">fourmilab.ch</a></p>
+<h2 id="license">License</h2>
+<p>This program is in the public domain.</p>
+          </div>
+        <!-- build:js scripts/vendor.min.js -->
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/bootstrap.min.js -->
+        <script src="/assets/lib/bootstrap-less/js/affix.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/alert.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/dropdown.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/tooltip.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/modal.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/transition.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/button.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/popover.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/carousel.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/scrollspy.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/collapse.js"></script>
+        <script src="/assets/lib/bootstrap-less/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/moment.min.js -->
+        <script src="/assets/lib/moment/moment.js"></script>
+        <script src="/assets/lib/moment-revolution/moment-revolution.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js script/highlight.min.js -->
+        <script src="/assets/lib/highlightjs/highlight.pack.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.min.js -->
+        <script src="/assets/scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,116 @@
+@icon-font-path: "../fonts/";
+@import "../lib/bootstrap-less/less/bootstrap.less";
+
+/*** Overridden values ***/
+@navbar-inverse-color : #ffffff;
+@navbar-inverse-bg : #008cba;
+@navbar-inverse-link-color : #fff;
+@navbar-inverse-link-hover-color : #eee;
+@navbar-inverse-brand-hover-color : #eee;
+@navbar-inverse-toggle-hover-bg  : #333;
+@navbar-inverse-toggle-icon-bar-bg  : #fff;
+@navbar-inverse-toggle-border-color  : #333;
+/*** Overridden values ***/
+
+body{
+  color: white;
+  background: #f4726d;
+}
+
+.starter {
+  padding-top: 50px;
+}
+.header {
+  padding: 40px 15px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 100;
+  font-family: Lato;
+  h1{
+    font-size: 4em;
+  }
+}
+.demo{
+  margin-bottom: 50px;
+  .revdate{
+    font-size: 1.2em;
+    line-height: 28px;
+  }
+}
+.code{
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 50px;
+}
+.readme{
+  background: #f4726d;
+  color: white;
+  font-size: 1.1em;
+  margin-bottom: 50px;
+  h1, h2, h3{
+    font-family: Lato;
+  }
+  h1{
+    margin-bottom: 20px;
+  }
+  code{
+    margin-right: 3px;
+    padding: 1px 3px;
+  }
+  pre{
+    border-radius: 4px;
+    br{
+      display: none;
+    }
+  }
+  a, a:hover{
+    color: lighten(#6D9CBE, 20);
+  }
+}
+
+pre{
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  &, .hljs{
+    background: #555;
+  }
+}
+
+.container{
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-control{
+  width: 300px;
+}
+
+a.ribbon {
+  top: 2.5em;
+  right: -3.7em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  color: white;
+  display: block;
+  padding: .5em 3.5em;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-color: #555;
+  &:hover{
+    text-decoration: none;
+    color: #f4726d;
+  }
+}
