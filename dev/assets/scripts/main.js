@@ -4,6 +4,11 @@ $(function (){
 
   hljs.initHighlighting();
 
+  $('form').on('submit', function(e){
+    e.preventDefault();
+    $('#date').change();
+  });
+
   $('#date').datetimepicker({
     format: 'dd/mm/yyyy',
     minView: 2,
