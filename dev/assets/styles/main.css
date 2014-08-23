@@ -5798,6 +5798,36 @@ body {
   font-size: 1.2em;
   line-height: 28px;
 }
+.datetimepicker {
+  color: #333;
+}
+.datetimepicker table tr td.active:active,
+.datetimepicker table tr td.active:hover:active,
+.datetimepicker table tr td.active.disabled:active,
+.datetimepicker table tr td.active.disabled:hover:active,
+.datetimepicker table tr td.active.active,
+.datetimepicker table tr td.active:hover.active,
+.datetimepicker table tr td.active.disabled.active,
+.datetimepicker table tr td.active.disabled:hover.active {
+  background-color: #f4726d;
+}
+.datetimepicker table tr td.active,
+.datetimepicker table tr td.active:hover,
+.datetimepicker table tr td.active.disabled,
+.datetimepicker table tr td.active.disabled:hover {
+  background-color: #f4726d;
+  background-image: none;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > td {
+  padding: 3px 11px;
+}
 .code {
   padding-left: 0;
   padding-right: 0;
@@ -5847,8 +5877,8 @@ pre .hljs {
   padding-left: 0;
   padding-right: 0;
 }
-.form-control {
-  width: 300px;
+.input-group {
+  width: 200px;
 }
 a.ribbon {
   top: 2.5em;

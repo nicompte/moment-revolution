@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="styles/main.min.css">
 
         <!--[if lt IE 9]>
@@ -34,10 +35,15 @@
             <h1>moment-revolution</h1>
           </div>
           <div class="demo clearfix">
-            <div class="col-md-offset-4 col-md-3">
+            <div class="col-md-offset-4 col-md-2">
               <form>
                 <div class="form-group">
-                  <input class="form-control" type="date" name="date" id="date">
+                  <div class="input-group">
+                    <input class="form-control" type="text" name="date" id="date" class="form_datetime">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
@@ -48,8 +54,7 @@
           <div class="col-md-12 code clearfix">
             <pre><code class="javascript col-md-offset-4 clearfix">
                 $('#date').on('change', function(){
-                  var b = $(this).val().split(/\D/);
-                  var date = new Date(b[0], --b[1], b[2]);
+                  var date = moment($(this).val(), 'DD/MM/YYYY');
                   var revDate = moment(date).toRevolutionnary();
                   $('#revdate').html(revDate);
                 });
