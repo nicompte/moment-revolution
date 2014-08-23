@@ -2,6 +2,10 @@
 
 `moment-revolution` is a [moment](http://momentjs.com) plugin to display a date in the [French Republican Calendar](http://en.wikipedia.org/wiki/French_Republican_Calendar) format.
 
+```js
+moment(new Date(1988, 2, 29).toRevolutionnary(); //Nonidi 9 Germinal 196
+```
+
 ## Installation
 
 moment-revolution is designed to work both using [node](http://nodejs.org) or in the browser.
