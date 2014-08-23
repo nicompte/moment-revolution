@@ -21,5 +21,7 @@
 console<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>(rev); <span class="hljs-comment">// Primidi 1 Vendémiaire 1</span></code></pre>
 <h2 id="credit">Credit</h2>
 <p>Fourmilab Calendar Converter - <a href="http://fourmilab.ch">fourmilab.ch</a></p>
+<h2 id="dedication">Dedication</h2>
+<p>This work is dedicated to Maximilien Marie Isidore de Robespierre.</p>
 <h2 id="license">License</h2>
 <p>This program is in the public domain.</p>
