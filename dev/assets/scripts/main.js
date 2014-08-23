@@ -1,5 +1,6 @@
 'use strict';
 
+hljs.initHighlightingOnLoad();
 
 Date.prototype.toDateInputValue = function() {
   var local = new Date(this);
@@ -8,7 +9,6 @@ Date.prototype.toDateInputValue = function() {
 };
 
 $(function (){
-  hljs.initHighlightingOnLoad();
 
   $('#date').on('change', function(){
     var b = $(this).val().split(/\D/);
