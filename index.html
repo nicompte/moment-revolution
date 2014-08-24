@@ -1,47 +1,47 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>moment-revolution</title>
-        <meta name="description" content="moment-revolution">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <title>moment-revolution</title>
+    <meta name="description" content="moment-revolution">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:100|Open+Sans:300' rel='stylesheet' type='text/css'>
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles/main.min.css">
-    </head>
-    <body class="starter">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100|Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body class="starter">
 
-      <a href="https://github.com/nicompte/moment-revolution" class="ribbon" target="_blank">Fork me on GitHub</a>
-        <div class="container">
-          <div class="header">
-            <h1>moment-revolution</h1>
-          </div>
-          <div class="demo clearfix">
-            <div class="col-md-offset-4 col-md-3 col-sm-offset-3 col-sm-3 col-lg-2">
-              <form>
-                <div class="form-group">
-                  <div class="input-group">
-                    <input class="form-control" type="text" name="date" id="date" class="form_datetime">
-                    <div class="input-group-addon">
-                      <i class="fa fa-calendar"></i>
-                    </div>
-                  </div>
+    <a href="https://github.com/nicompte/moment-revolution" class="ribbon" target="_blank">Fork me on GitHub</a>
+    <div class="container">
+      <div class="header">
+        <h1>moment-revolution</h1>
+      </div>
+      <div class="demo clearfix">
+        <div class="col-md-offset-4 col-md-3 col-sm-offset-3 col-sm-3 col-lg-2">
+          <form>
+            <div class="form-group">
+              <div class="input-group">
+                <input class="form-control" type="text" name="date" id="date" class="form_datetime">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
                 </div>
-              </form>
+              </div>
             </div>
-            <div id="revdate" class="col-md-3 revdate">
-              <span></span>
-            </div>
-          </div>
-          <div class="col-md-12 code clearfix">
-            <pre><code class="javascript col-md-offset-5 col-xs-offset-1 clearfix">$('#date').on('change', function(){
+          </form>
+        </div>
+        <div id="revdate" class="col-md-3 revdate">
+          <span></span>
+        </div>
+      </div>
+      <div class="col-md-12 code clearfix">
+        <pre><code class="javascript col-md-offset-5 col-xs-offset-1 clearfix">$('#date').on('change', function(){
   var date = moment($(this).val(), 'DD/MM/YYYY');
   var revDate = moment(date).toRevolutionnary();
   $('#revdate').html(revDate);
 });</code></pre>
-          </div>
-          <div class="readme col-md-8 col-md-offset-2">
+      </div>
+      <div class="readme col-md-8 col-md-offset-2">
 <h1 id="moment-revolution">moment-revolution</h1>
 <p><code>moment-revolution</code> is a <a href="http://momentjs.com">moment</a> plugin to display a date in the <a href="http://en.wikipedia.org/wiki/French_Republican_Calendar">French Republican Calendar</a> format.</p>
 <pre><code class="lang-js">moment(<span class="hljs-literal">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1988</span>, <span class="hljs-number">2</span>, <span class="hljs-number">29</span>)<span class="hljs-built_in">.</span>toRevolutionnary(); <span class="hljs-comment">//Nonidi 9 Germinal 196</span></code></pre>
@@ -69,7 +69,21 @@ console<span class="hljs-built_in">.</span><span class="hljs-keyword">log</span>
 <p>This work is dedicated to Maximilien Marie Isidore de Robespierre.</p>
 <h2 id="license">License</h2>
 <p>This program is in the public domain.</p>
-          </div>
-        <script src="scripts/main.min.js"></script>
-</body>
+      </div>
+    </div>
+
+    <script>
+      'use strict';
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41369793-4', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
+
+    <script src="scripts/main.min.js"></script>
+  </body>
 </html>

@@ -23,7 +23,8 @@
 		"ApplicationConfiguration": true,
 		"$": true,
 		"hljs": true,
-		"moment": true
+		"moment": true,
+		"ga": true
 	},
 	"predef": [ // Extra globals.
 		"define",
