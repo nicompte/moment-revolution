@@ -1,31 +1,37 @@
 'use strict';
 
-var moment = require('../../index2.js'),
+var moment = require('../../index.js'),
   chai = require('chai');
 
 describe('moment()', function(){
-  describe('#toRevolutionnary()', function(){
+  describe('#revolution().format()', function(){
     it('should return a revolutionnary date', function(){
-      chai.assert.equal(moment(new Date(2014, 7, 22)).toRevolutionnary(), 'Quintidi 5 Fructidor 222');
-      chai.assert.notEqual(moment(new Date(2014, 7, 22)).toRevolutionnary(), 'Quintidi 6 Fructidor 222');
-      chai.assert.equal(moment(new Date(2014, 8, 1)).toRevolutionnary(), 'Quintidi 15 Fructidor 222');
-      //chai.assert.equal(moment(new Date(1988, 2, 29)).toRevolutionnary(), 'Nonidi 9 Germinal 196');
+      chai.assert.equal(moment(new Date(2014, 7, 25)).revolution().format(), 'Octidi 8 Fructidor 222');
+      chai.assert.equal(moment(new Date(2014, 8, 1)).revolution().format(), 'Quintidi 15 Fructidor 222');
+      chai.assert.equal(moment(new Date(1802, 8, 23)).revolution().format(), 'Primidi 1 Vendémiaire 11');
+      chai.assert.equal(moment(new Date(1988, 2, 29)).revolution().format(), 'Nonidi 9 Germinal 196');
     });
-    it('should handle weird dates', function(){
-      chai.assert.equal(moment(new Date(2014, 8, 17)).toRevolutionnary(), 'Jour de la Vertu 1 Sans-culottides 222');
-      chai.assert.equal(moment(new Date(2014, 8, 18)).toRevolutionnary(), 'Jour du Génie 2 Sans-culottides 222');
-      chai.assert.equal(moment(new Date(2014, 8, 19)).toRevolutionnary(), 'Jour du Travail 3 Sans-culottides 222');
-      chai.assert.equal(moment(new Date(2014, 8, 20)).toRevolutionnary(), 'Jour de l\'Opinion 4 Sans-culottides 222');
-      chai.assert.equal(moment(new Date(2014, 8, 21)).toRevolutionnary(), 'Jour des Récompenses 5 Sans-culottides 222');
+    it('should handle the Sans-culottides month', function(){
+      chai.assert.equal(moment(new Date(2014, 8, 16)).revolution().format(), 'Décadi 30 Fructidor 222');
+      chai.assert.equal(moment(new Date(2014, 8, 17)).revolution().format(), 'Jour de la Vertu 1 Sans-culottides 222');
+      chai.assert.equal(moment(new Date(2014, 8, 18)).revolution().format(), 'Jour du Génie 2 Sans-culottides 222');
+      chai.assert.equal(moment(new Date(2014, 8, 19)).revolution().format(), 'Jour du Travail 3 Sans-culottides 222');
+      chai.assert.equal(moment(new Date(2014, 8, 20)).revolution().format(), 'Jour de l\'Opinion 4 Sans-culottides 222');
+      chai.assert.equal(moment(new Date(2014, 8, 21)).revolution().format(), 'Jour des Récompenses 5 Sans-culottides 222');
+      chai.assert.equal(moment(new Date(1795, 8, 16)).revolution().format(), 'Décadi 30 Fructidor 3');
+      chai.assert.equal(moment(new Date(1795, 8, 17)).revolution().format(), 'Jour de la Vertu 1 Sans-culottides 3');
     });
-    it('should handle revolution days', function(){
-      chai.assert.equal(moment(new Date(2018, 8, 22)).toRevolutionnary(), 'Jour de la Révolution 6 Sans-culottides 226');
+    it('should handle Revolution days', function(){
+      chai.assert.equal(moment(new Date(1795, 8, 22)).revolution().format(), 'Jour de la Révolution 6 Sans-culottides 3');
+      chai.assert.equal(moment(new Date(1799, 8, 22)).revolution().format(), 'Jour de la Révolution 6 Sans-culottides 7');
+      chai.assert.equal(moment(new Date(2018, 8, 22)).revolution().format(), 'Jour de la Révolution 6 Sans-culottides 226');
+      chai.assert.equal(moment(new Date(2022, 8, 22)).revolution().format(), 'Jour de la Révolution 6 Sans-culottides 230');
     });
   });
 });
 
 describe('Revolutionnay calendar', function () {
   it('should start the 22th of September, 1792', function () {
-    chai.assert.equal(moment(new Date(1792, 8, 22)).toRevolutionnary(), 'Primidi 1 Vendémiaire 1');
+    chai.assert.equal(moment(new Date(1792, 8, 22)).revolution().format(), 'Primidi 1 Vendémiaire 1');
   });
 });

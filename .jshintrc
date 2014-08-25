@@ -18,8 +18,7 @@
 	"trailing": true, // Prohibit trailing whitespaces.
 	"smarttabs": false, // Suppresses warnings about mixed tabs and spaces
 	"globals": { // Globals variables.
-		"moment": true,
-		"window": true
+
 	},
 	"predef": [ // Extra globals.
 		"define",

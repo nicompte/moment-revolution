@@ -37,10 +37,6 @@ console.log(rev); // Primidi 1 Vendémiaire 1
 
 ```
 
-## Credit
-
-Fourmilab Calendar Converter - [fourmilab.ch](http://fourmilab.ch)
-
 ## Dedication
 
 This work is dedicated to Maximilien Marie Isidore de Robespierre.

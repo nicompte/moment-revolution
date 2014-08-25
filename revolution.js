@@ -1,50 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-(function(){
-
-  'use strict';
-
-  var revolution = require('./revolution'),
-    moment = require('moment');
-
-  var Revolution = function (moment) {
-    var date = revolution(moment.year(), moment.month() + 1, moment.date());
-    this.dayName = date.dayName;
-    this.day = date.day;
-    this.month = date.month;
-    this.year = date.year;
-  };
-
-  Revolution.prototype.format = function(template){
-    if(typeof template === 'undefined' || template === '') {
-      template = this.format.default;
-    }
-    for(var token in this.format.tokens){
-      template = template.replace(this.format.tokens[token], this[token]);
-    }
-    return template;
-
-  };
-
-  Revolution.prototype.format.default = 'ddd D M YYYY';
-
-  Revolution.prototype.format.tokens = {
-    day: /D/,
-    dayName: /ddd/,
-    month: /M/,
-    year: /YYYY/
-  };
-
-  moment.fn.revolution  = function() {
-    return new Revolution(this);
-  };
-
-  module.exports = moment;
-
-})();
-
-},{"./revolution":3,"moment":2}],2:[function(require,module,exports){
-
-},{}],3:[function(require,module,exports){
 (function(){
 
   'use strict';
@@ -196,5 +149,3 @@
   module.exports = revolution;
 
 })();
-
-},{}]},{},[1])
