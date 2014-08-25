@@ -22,6 +22,7 @@ moment(new Date(1988, 2, 29).revolution().format(); //Nonidi 9 Germinal 196
 
 ### With node
 `moment-revolution`requires moment, but does not include it in its own dependencies, so you have to add it to your `package.json`file. However, you do not have to require it.
+
 `npm install moment-revolution`
 
 ```js
