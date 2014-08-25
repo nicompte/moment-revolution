@@ -18,7 +18,7 @@ $(function (){
   })
   .on('change', function(){
     var date = moment($(this).val(), 'DD/MM/YYYY');
-    var revDate = moment(date).toRevolutionnary();
+    var revDate = moment(date).revolution().format();
     $('#revdate').html(revDate);
   })
   .val(moment(new Date()).format('DD/MM/YYYY'))
@@ -26,7 +26,7 @@ $(function (){
     $('#date').datetimepicker('show');
   });
 
-  var revDate = moment(new Date()).toRevolutionnary();
+  var revDate = moment(new Date()).revolution().format();
   $('#revdate').html(revDate);
 
 });
