@@ -3,7 +3,7 @@
 `moment-revolution` is a [moment](http://momentjs.com) plugin to display a date in the [French Republican Calendar](http://en.wikipedia.org/wiki/French_Republican_Calendar) format.
 
 ```js
-moment(new Date(1988, 2, 29).toRevolutionnary(); //Nonidi 9 Germinal 196
+moment(new Date(1988, 2, 29).revolution.format(); //Nonidi 9 Germinal 196
 ```
 
 ## Installation
@@ -32,7 +32,7 @@ var moment = require('moment-revolution');
 var moment = require('moment-revolution');
 
 var start = moment(new Date(1792, 8, 22));
-var rev = start.toRevolutionnary();
+var rev = start.revolution.format();
 console.log(rev); // Primidi 1 Vendémiaire 1
 
 ```

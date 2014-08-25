@@ -1,6 +1,6 @@
 {
   "name": "moment-revolution",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "moment-revolution is a moment plugin to display a date in the French Republican Calendar format.",
   "repository": "https://github.com/nicompte/moment-revolution",
   "main": "index.js",
