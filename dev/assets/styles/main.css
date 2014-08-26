@@ -5883,12 +5883,12 @@ pre .hljs {
 }
 a.ribbon {
   top: 2.5em;
-  right: -3.7em;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  left: -3.7em;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
   color: white;
   display: block;
   padding: .5em 3.5em;
