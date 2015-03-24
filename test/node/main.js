@@ -35,3 +35,9 @@ describe('Revolutionnay calendar', function () {
     chai.assert.equal(moment(new Date(1792, 8, 22)).revolution().format(), 'Primidi 1 Vendémiaire 1');
   });
 });
+
+describe('Revolutionnary date formatting', function () {
+  it('handles roman digits', function () {
+    chai.assert.equal(moment(new Date(1792, 8, 22)).revolution().format('ddd D M yyyy'), 'Primidi 1 Vendémiaire I');
+  });
+});

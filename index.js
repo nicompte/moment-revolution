@@ -10,6 +10,7 @@
     this.day = date.day;
     this.month = date.month;
     this.year = date.year;
+    this.romanYear = date.romanYear;
   };
 
   Revolution.prototype.format = function (template) {
@@ -28,7 +29,8 @@
     day: /D/,
     dayName: /ddd/,
     month: /M/,
-    year: /YYYY/
+    year: /YYYY/,
+    romanYear: /yyyy/
   };
 
   moment.fn.revolution  = function () {
