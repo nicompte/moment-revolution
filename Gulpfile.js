@@ -7,7 +7,7 @@ var mocha = require('gulp-mocha');
 var rename = require('gulp-rename');
 var browserify = require('gulp-browserify');
 
-gulp.task('jshint', function() {
+gulp.task('jshint', function () {
   gulp.src(['**/*.js', '!node_modules/**/*.js', '!dist/**/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
@@ -18,7 +18,7 @@ gulp.task('test', function () {
     .pipe(mocha({reporter: 'list'}));
 });
 
-gulp.task('uglify', function() {
+gulp.task('uglify', function () {
   gulp.src('dist/moment-revolution.js')
     .pipe(uglify('moment-revolution.min.js'))
     .pipe(gulp.dest('dist'));
