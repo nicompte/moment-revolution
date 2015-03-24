@@ -1,5 +1,4 @@
-(function(){
-
+(function () {
   'use strict';
 
   var revolution = require('./revolution'),
@@ -13,15 +12,14 @@
     this.year = date.year;
   };
 
-  Revolution.prototype.format = function(template){
-    if(typeof template === 'undefined' || template === '') {
+  Revolution.prototype.format = function (template) {
+    if (typeof template === 'undefined' || template === '') {
       template = this.format.default;
     }
-    for(var token in this.format.tokens){
+    for (var token in this.format.tokens) {
       template = template.replace(this.format.tokens[token], this[token]);
     }
     return template;
-
   };
 
   Revolution.prototype.format.default = 'ddd D M YYYY';
@@ -33,10 +31,9 @@
     year: /YYYY/
   };
 
-  moment.fn.revolution  = function() {
+  moment.fn.revolution  = function () {
     return new Revolution(this);
   };
 
   module.exports = moment;
-
 })();
