@@ -140,7 +140,7 @@ gulp.task('less-prod', function () {
     .pipe(less({
       paths: [path.join(__dirname, 'less', 'includes')]
     }))
-    .pipe(gulp.dest(config.dev + '/assets/styles/'));
+    .pipe(gulp.dest(config.build + '/assets/styles/'));
 });
 
 gulp.task('clean', function () {
