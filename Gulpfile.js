@@ -143,7 +143,13 @@ gulp.task('less-prod', function () {
     .pipe(gulp.dest(config.dev + '/assets/styles/'));
 });
 
+gulp.task('clean', function () {
+  var clean = require('gulp-clean');
+  return gulp.src('build', { read: false })
+    .pipe(clean());
+});
+
 gulp.task('default', ['less-dev', 'connect-dev', 'watch']);
 gulp.task('build-templates', ['less-prod', 'imagemin', 'fonts', 'template-parser']);
-gulp.task('build', ['less-prod', 'imagemin', 'fonts', 'html-parser']);
+gulp.task('build', ['clean', 'less-prod', 'imagemin', 'fonts', 'html-parser']);
 gulp.task('prod', ['connect-prod']);
